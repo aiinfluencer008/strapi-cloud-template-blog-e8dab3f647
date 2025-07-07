@@ -43,6 +43,11 @@
       "type": "component",
       "component": "faqs.faqs",
       "repeatable": true
+    },
+    "language": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::language.language"
     }
   }
 }
