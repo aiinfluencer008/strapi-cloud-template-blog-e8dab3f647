@@ -35,6 +35,14 @@
       "relation": "oneToMany",
       "target": "api::blog.blog",
       "mappedBy": "category"
+    },
+    "publishDate": {
+      "type": "date"
+    },
+    "faqs": {
+      "type": "component",
+      "component": "faqs.faqs",
+      "repeatable": true
     }
   }
 }

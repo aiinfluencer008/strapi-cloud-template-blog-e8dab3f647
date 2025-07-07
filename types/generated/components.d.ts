@@ -1,5 +1,57 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface FaqsFaqs extends Struct.ComponentSchema {
+  collectionName: 'components_faqs_faqs';
+  info: {
+    displayName: 'faqs';
+  };
+  attributes: {
+    answer: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface FooterLinksFooterLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_links_footer_links';
+  info: {
+    displayName: 'footerLinks';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface NavLinkNavLink extends Struct.ComponentSchema {
+  collectionName: 'components_nav_link_nav_links';
+  info: {
+    displayName: 'navLink';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface NavLinkNavlink extends Struct.ComponentSchema {
+  collectionName: 'components_nav_link_navlinks';
+  info: {
+    displayName: 'navlink';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
+export interface NavLinksNavLinks extends Struct.ComponentSchema {
+  collectionName: 'components_nav_links_nav_links';
+  info: {
+    displayName: 'navLinks';
+  };
+  attributes: {};
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -75,6 +127,11 @@ export interface TagsTags extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'faqs.faqs': FaqsFaqs;
+      'footer-links.footer-links': FooterLinksFooterLinks;
+      'nav-link.nav-link': NavLinkNavLink;
+      'nav-link.navlink': NavLinkNavlink;
+      'nav-links.nav-links': NavLinksNavLinks;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
